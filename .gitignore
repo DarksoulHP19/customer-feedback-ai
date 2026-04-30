@@ -75,6 +75,10 @@ docs/_build/
 .pybuilder/
 target/
 
+#extra files but important to be ignored
+.env
+data/*.csv 
+
 # Jupyter Notebook
 .ipynb_checkpoints
 

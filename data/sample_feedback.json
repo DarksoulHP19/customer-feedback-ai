@@ -1,0 +1,22 @@
+[
+  {
+    "customer_id": "C001",
+    "source": "email",
+    "feedback": "Your app keeps crashing every time I try to checkout. I've lost my cart 3 times now. This is extremely frustrating and I'm considering switching to a competitor."
+  },
+  {
+    "customer_id": "C002",
+    "source": "chat",
+    "feedback": "The new dashboard is clean and easy to navigate. Loved the dark mode update! Would be nice to have export to PDF though."
+  },
+  {
+    "customer_id": "C003",
+    "source": "form",
+    "feedback": "Delivery was 2 weeks late and customer support never responded to my 3 emails. Very disappointed with the service."
+  },
+  {
+    "customer_id": "C004",
+    "source": "chat",
+    "feedback": "Onboarding was smooth and the UI is pretty intuitive. Minor issue: the date picker doesn't work well on mobile."
+  }
+]
