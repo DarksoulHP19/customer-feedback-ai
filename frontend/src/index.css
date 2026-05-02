@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg:        #070b12;
+  --color-surface:   #0c1119;
+  --color-border:    rgba(255,255,255,0.07);
+  --color-cyan:      #00e5ff;
+  --color-cyan-dim:  rgba(0,229,255,0.08);
+  --color-green:     #00e676;
+  --color-red:       #ff1744;
+  --color-amber:     #ffc400;
+  --color-purple:    #d500f9;
+  --color-muted:     #4a5568;
+  --color-subtle:    #1a2332;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: #e2e8f0;
+  font-family: var(--font-display);
+  overflow: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,229,255,0.3); border-radius: 2px; }
+
+/* Noise texture overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 0 0 rgba(0,229,255,0.0); }
+  50%     { box-shadow: 0 0 20px 2px rgba(0,229,255,0.25); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes barGrow {
+  from { width: 0%; }
+}
+
+.animate-fade-up   { animation: fadeUp 0.45s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in   { animation: fadeIn 0.3s ease both; }
+.animate-spin-slow { animation: spin 0.8s linear infinite; }
+.animate-pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+.glass {
+  background: rgba(12,17,25,0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.card-hover {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  border-color: rgba(0,229,255,0.2);
+  box-shadow: 0 0 0 1px rgba(0,229,255,0.05), 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.bar-fill {
+  animation: barGrow 0.8s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.3s;
+}
