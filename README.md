@@ -38,14 +38,14 @@ Customer Feedback (text)
 └────────┬────────┘
          │
          ▼
-┌──────────────────────┐
+┌───────────────────────┐
 │ Topic Clustering Agent│ → topics + keywords (max 3)
-└────────┬─────────────┘
+└────────┬──────────────┘
          │
          ▼
-┌──────────────────┐
+┌───────────────────┐
 │ Urgency Classifier│ → low / medium / high / critical
-└────────┬─────────┘
+└────────┬──────────┘
          │
          ▼
 ┌──────────────────┐
@@ -226,7 +226,7 @@ Health check — returns `{ "message": "Customer Feedback AI is running 🚀" }`
 ## 🎨 UI Overview
 
 | Panel | Description |
-|---|---|
+| --- | --- |
 | **Sidebar** | Icon nav — Dashboard, Analyze, History |
 | **Left panel** | Feedback input, source selector, history |
 | **Right panel** | 4 result cards — Sentiment, Topics, Urgency, Insights |
@@ -250,7 +250,7 @@ from openai import AsyncOpenAI
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
-|---|---|
+| --- | --- |
 | Backend | FastAPI, Uvicorn, Pydantic v2 |
 | AI | OpenAI GPT-4o-mini, async agents |
 | Frontend | React 18, Vite, Tailwind CSS v4 |
@@ -261,7 +261,7 @@ from openai import AsyncOpenAI
 
 ## 📄 License
 
-MIT License — feel free to use, modify, and distribute.
+([MIT License](LICENSE))  — feel free to use, modify, and distribute.
 
 ---
 
