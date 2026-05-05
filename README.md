@@ -10,6 +10,16 @@ An AI agent system to analyze customer reviews, extract key themes, and prioriti
 
 ---
 
+## 🖼️ Preview
+
+![Dashboard Preview](/images/Dashboard.png)
+
+---
+
+![Feedback Analysis](/images/Feedback.png)
+
+---
+
 ## 📦 Dataset
 
 Download the Amazon Product Reviews dataset from Kaggle:
