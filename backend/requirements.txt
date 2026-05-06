@@ -1,8 +1,9 @@
-fastapi
-uvicorn[standard]
+fastapi[standard]
+uvicorn
 openai
 python-dotenv
-pydantic
+pydantic 
 pytest
 pytest-asyncio
 httpx
+slowapi
